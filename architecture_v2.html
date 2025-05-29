@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创始人决策智能体核心架构 V2.0</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <style>
+        body { 
+            font-family: "Helvetica Neue", Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #f8f9fa; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        h2 {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+        .diagram-container {
+            background-color: #fff; 
+            padding: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            margin-bottom: 30px;
+            overflow: auto;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+        .founder-color { background-color: #e0f7fa; border-color: #00bcd4; }
+        .core-color { background-color: #fff9c4; border-color: #fbc02d; }
+        .services-color { background-color: #e8f5e9; border-color: #4caf50; }
+        .foresight-color { background-color: #ffebee; border-color: #ef5350; }
+        .data-color { background-color: #e3f2fd; border-color: #2196f3; }
+        .learning-color { background-color: #f3e5f5; border-color: #9c27b0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>创始人决策智能体核心架构 V2.0</h1>
+        <h2>组件关系与数据流图</h2>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f0f0f0', 'primaryTextColor': '#333', 'primaryBorderColor': '#999', 'lineColor': '#666', 'secondaryColor': '#f9f9f9', 'tertiaryColor': '#fff' }}}%%
+graph TD
+    A[人类创始人] -->|指令与需求| B[认知编排核心]
+    B -->|决策建议与解释| A
+    
+    subgraph 核心系统
+        B[认知编排核心] -->|调用与编排| C[AI认知微服务库]
+        C -->|分析结果| B
+        
+        D[前瞻性战略预警系统] -->|预警信号与机会| B
+        B -->|深度分析请求| C
+        
+        E[统一数据与知识中台] -->|数据与知识支持| B
+        E -->|数据与知识支持| C
+        E -->|数据与知识支持| D
+        
+        F[持续学习与自适应优化子系统] -->|优化参数与模型| B
+        F -->|优化参数与模型| C
+        F -->|优化参数与模型| D
+        F -->|知识更新| E
+        
+        B -->|执行结果与反馈| F
+        C -->|服务性能数据| F
+        D -->|预测准确性数据| F
+    end
+    
+    G[外部数据源] -->|实时数据流| E
+    
+    classDef founder fill:#e0f7fa,stroke:#00bcd4,stroke-width:2px;
+    classDef core fill:#fff9c4,stroke:#fbc02d,stroke-width:2px;
+    classDef services fill:#e8f5e9,stroke:#4caf50,stroke-width:2px;
+    classDef foresight fill:#ffebee,stroke:#ef5350,stroke-width:2px;
+    classDef data fill:#e3f2fd,stroke:#2196f3,stroke-width:2px;
+    classDef learning fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px;
+    classDef external fill:#f5f5f5,stroke:#9e9e9e,stroke-width:1px;
+    
+    class A founder;
+    class B core;
+    class C services;
+    class D foresight;
+    class E data;
+    class F learning;
+    class G external;
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color founder-color"></div>
+                <span>人类创始人</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color core-color"></div>
+                <span>认知编排核心</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color services-color"></div>
+                <span>AI认知微服务库</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color foresight-color"></div>
+                <span>前瞻性战略预警系统</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color data-color"></div>
+                <span>统一数据与知识中台</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color learning-color"></div>
+                <span>持续学习与自适应优化子系统</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
