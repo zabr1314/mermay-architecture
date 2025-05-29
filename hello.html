@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创始人决策智能体 - 概念架构与运行逻辑</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #0056b3; }
+        nav { background: #0056b3; padding: 10px; text-align: center; border-radius: 4px; margin-bottom: 20px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .module { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; background-color: #f9f9f9; }
+        .module h3 { margin-top: 0; }
+        .io { font-style: italic; color: #555; font-size: 0.9em; }
+        .logic-flow { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #ccc; }
+        .logic-flow a { display: inline-block; margin-right: 10px; margin-bottom: 5px; padding: 5px 10px; background-color: #e7f3ff; color: #0056b3; text-decoration: none; border-radius: 3px; border: 1px solid #0056b3;}
+        .logic-flow a:hover { background-color: #0056b3; color: white; }
+        .placeholder { color: #999; font-style: italic; text-align: center; padding: 10px; border: 1px dashed #ccc; background-color: #eee; margin-top:10px;}
+        .important-note { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; padding: 10px; border-radius: 4px; margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>创始人决策智能体 - 概念架构与运行逻辑</h1>
+        <div class="important-note">
+            <strong>请注意：</strong> 这是一个静态的HTML页面，旨在通过模拟页面跳转和链接来展示AI智能体各模块间的概念性结构和信息流。它不具备真实的AI功能。
+        </div>
+
+        <nav>
+            <a href="#ceo_ai">AI核心中枢 (CEO AI)</a>
+            <a href="#data_intel">数据与情报中心</a>
+            <a href="#analytics_insight">分析与洞察部</a>
+            <a href="#strategy_solutions">战略与方案部</a>
+            <a href="#knowledge_learning">知识与学习中心</a>
+        </nav>
+
+        <div id="ceo_ai" class="module">
+            <h2>AI核心中枢 (CEO AI / 创始人办公室主任)</h2>
+            <p>作为智能体的"大脑"和核心交互界面，直接与人类创始人对接，负责理解指令、任务分派、信息整合和最终建议生成。</p>
+            <p class="io"><strong>输入：</strong>创始人指令、各AI部门的分析报告、用户反馈。</p>
+            <p class="io"><strong>输出：</strong>向创始人提供决策建议、向各AI部门分派任务。</p>
+            <div class="placeholder">[创始人指令输入区域 / 核心洞察仪表盘]</div>
+
+            <div class="logic-flow">
+                <h4>模拟决策流程启动点:</h4>
+                <p>假设创始人发起一项"新市场进入可行性分析"：</p>
+                <ol>
+                    <li>CEO AI接收指令。 <span style="color:green;">(当前位置)</span></li>
+                    <li><a href="#data_intel">分派任务给数据与情报中心</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="data_intel" class="module">
+            <h2>数据与情报中心</h2>
+            <p>负责收集、整理和提供决策所需的各类数据和情报，包括市场数据、竞争对手信息、行业趋势等。</p>
+            <p class="io"><strong>输入：</strong>CEO AI的任务需求、外部数据源。</p>
+            <p class="io"><strong>输出：</strong>结构化数据集、情报简报。</p>
+            <div class="placeholder">[数据收集与整理工作区]</div>
+
+            <div class="logic-flow">
+                <h4>模拟决策流程:</h4>
+                <p>收到"新市场进入可行性分析"任务：</p>
+                <ol>
+                    <li>收集目标市场规模、增长率数据</li>
+                    <li>整理主要竞争对手信息</li>
+                    <li>分析市场准入门槛</li>
+                    <li>准备完整数据包</li>
+                    <li><a href="#analytics_insight">将数据传递给分析与洞察部</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="analytics_insight" class="module">
+            <h2>分析与洞察部</h2>
+            <p>基于数据中心提供的信息进行深度分析，发现隐藏的模式、趋势和机会，提供洞察。</p>
+            <p class="io"><strong>输入：</strong>数据与情报中心的数据包、CEO AI的分析要求。</p>
+            <p class="io"><strong>输出：</strong>分析报告、洞察摘要、预测模型。</p>
+            <div class="placeholder">[数据分析与可视化工作区]</div>
+
+            <div class="logic-flow">
+                <h4>模拟决策流程:</h4>
+                <p>基于收到的市场数据进行分析：</p>
+                <ol>
+                    <li>进行市场吸引力评估</li>
+                    <li>分析竞争格局与市场定位</li>
+                    <li>评估潜在风险与回报</li>
+                    <li>生成市场进入难度评分</li>
+                    <li><a href="#strategy_solutions">将分析结果传递给战略与方案部</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="strategy_solutions" class="module">
+            <h2>战略与方案部</h2>
+            <p>基于分析部门的洞察，制定具体的战略选项和行动方案，包括资源配置、时间表和预期结果。</p>
+            <p class="io"><strong>输入：</strong>分析与洞察部的报告、CEO AI的战略要求。</p>
+            <p class="io"><strong>输出：</strong>战略方案、行动计划、资源需求。</p>
+            <div class="placeholder">[战略规划与方案设计工作区]</div>
+
+            <div class="logic-flow">
+                <h4>模拟决策流程:</h4>
+                <p>基于市场分析制定进入策略：</p>
+                <ol>
+                    <li>设计三种市场进入方案（独立进入/合作/收购）</li>
+                    <li>评估各方案的资源需求与ROI</li>
+                    <li>制定时间表与里程碑</li>
+                    <li>准备风险缓解策略</li>
+                    <li><a href="#knowledge_learning">咨询知识与学习中心</a></li>
+                    <li><a href="#ceo_ai">向CEO AI提交完整方案</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="knowledge_learning" class="module">
+            <h2>知识与学习中心</h2>
+            <p>管理智能体的知识库，提供历史案例参考，并从每次决策中学习，不断优化决策模型。</p>
+            <p class="io"><strong>输入：</strong>历史决策数据、外部知识源、各部门反馈。</p>
+            <p class="io"><strong>输出：</strong>相关案例参考、最佳实践建议、模型优化参数。</p>
+            <div class="placeholder">[知识管理与学习优化工作区]</div>
+
+            <div class="logic-flow">
+                <h4>模拟决策流程:</h4>
+                <p>支持市场进入决策：</p>
+                <ol>
+                    <li>检索类似市场进入案例</li>
+                    <li>提取关键成功因素与失败教训</li>
+                    <li>提供行业最佳实践参考</li>
+                    <li><a href="#strategy_solutions">向战略部提供知识支持</a></li>
+                    <li><a href="#ceo_ai">向CEO AI提供历史参考</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
